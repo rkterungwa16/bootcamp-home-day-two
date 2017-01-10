@@ -9,4 +9,9 @@ describe("words()", function() {
     expect(words("one of each")).toEqual(expectedCounts);
   });
 
+  it("counts multiple occurrences", function() {
+    var expectedCounts = { one: 1, fish: 4, two: 1, red: 1, blue: 1 };
+    expect(words("one fish two fish red fish blue fish")).toEqual(expectedCounts);
+  });
+
 });
