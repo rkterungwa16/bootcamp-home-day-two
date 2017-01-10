@@ -29,7 +29,9 @@ describe("Produce the reverse order of a word: ", function() {
       expect(reverseString('books')).toEqual('skoob');
     });
 
-    
+    it("should return `nomolos` for `solomon`", function() {
+      expect(reverseString('solomon')).toEqual('nomolos');
+    });
 
   });
 
