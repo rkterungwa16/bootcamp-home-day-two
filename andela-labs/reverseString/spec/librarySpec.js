@@ -7,4 +7,12 @@ describe("Produce the reverse order of a word: ", function() {
 
   });
 
+  describe("Case for palindromes", function() {
+
+    it("should return true for `anna`", function() {
+      expect(reverseString('anna')).toEqual(true);
+    });
+    
+  });
+
 });
