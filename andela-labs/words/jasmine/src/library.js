@@ -1,6 +1,6 @@
 function words (mString) {
 	var mObj = {};
-	var mArray = mString.split(/\W/);
+	var mArray = mString.split(/\s/);
 	for (var i=0; i<mArray.length; i++) {
 		if (mArray[i].length === 0) {
 			mObj;

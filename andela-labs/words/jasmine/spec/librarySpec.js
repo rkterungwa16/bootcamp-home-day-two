@@ -14,14 +14,24 @@ describe("words()", function() {
     expect(words("one fish two fish red fish blue fish")).toEqual(expectedCounts);
   });
 
+  it("includes punctuation", function() {
+    var expectedCounts = { car: 1, ":": 2, carpet: 1, as: 1, java: 1, "javascript!!&@$%^&": 1 };
+    expect(words("car : carpet as java : javascript!!&@$%^&")).toEqual(expectedCounts);
+  });
+
   it("includes numbers", function() {
     var expectedCounts = { testing: 2, 1: 1, 2: 1 };
     expect(words("testing 1 2 testing")).toEqual(expectedCounts);
   });
 
-  it("respects case", function() {
+   it("respects case", function() {
     var expectedCounts = { go: 1, Go:1, GO:1 };
     expect(words("go Go GO")).toEqual(expectedCounts);
+  });
+
+  it("counts properly international characters", function() {
+    var expectedCounts = { "¡Hola!": 1, "¿Qué": 1, "tal?": 1, "Привет!": 1 };
+    expect(words("¡Hola! ¿Qué tal? Привет!")).toEqual(expectedCounts);
   });
 
   it("counts multiline", function() {
@@ -30,10 +40,10 @@ describe("words()", function() {
   });
 
   it("counts tabs", function() {
-
     var expectedCounts = { hello: 1, world: 1 };
     expect(words("hello\tworld")).toEqual(expectedCounts);
   });
+
   it("counts multiple spaces as one", function() {
     var expectedCounts = { hello: 1, world: 1 };
     expect(words("hello  world")).toEqual(expectedCounts);
@@ -43,5 +53,4 @@ describe("words()", function() {
     var expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, toString: 1,  "ok?": 1};
     expect(words("reserved words like prototype and toString ok?")).toEqual(expectedCounts);
   });
-
 });
