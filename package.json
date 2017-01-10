@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/rkterungwa16/bootcamp-home-day-two/issues"
   },
-  "homepage": "https://github.com/rkterungwa16/bootcamp-home-day-two#readme"
+  "homepage": "https://github.com/rkterungwa16/bootcamp-home-day-two#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "github": "^7.3.2"
+  }
 }
