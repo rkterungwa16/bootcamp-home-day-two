@@ -33,6 +33,10 @@ describe("Produce the reverse order of a word: ", function() {
       expect(reverseString('solomon')).toEqual('nomolos');
     });
 
+    it("should return `csim` for `misc`", function() {
+      expect(reverseString('misc')).toEqual('csim');
+    });
+
   });
 
 });
