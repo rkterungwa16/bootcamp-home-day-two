@@ -29,4 +29,9 @@ describe("words()", function() {
     expect(words("hello\nworld")).toEqual(expectedCounts);
   });
 
+  it("counts tabs", function() {
+    var expectedCounts = { hello: 1, world: 1 };
+    expect(words("hello\tworld")).toEqual(expectedCounts);
+  });
+
 });
