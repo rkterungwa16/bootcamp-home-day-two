@@ -19,4 +19,9 @@ describe("words()", function() {
     expect(words("testing 1 2 testing")).toEqual(expectedCounts);
   });
 
+  it("respects case", function() {
+    var expectedCounts = { go: 1, Go:1, GO:1 };
+    expect(words("go Go GO")).toEqual(expectedCounts);
+  });
+
 });
