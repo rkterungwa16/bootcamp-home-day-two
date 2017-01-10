@@ -1,0 +1,19 @@
+{
+  "name": "bootcamp-home-day-two",
+  "version": "1.0.0",
+  "description": "'Solve for the days exercises and test with jasmine'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkterungwa16/bootcamp-home-day-two.git"
+  },
+  "author": "Richard Terungwa Kombol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rkterungwa16/bootcamp-home-day-two/issues"
+  },
+  "homepage": "https://github.com/rkterungwa16/bootcamp-home-day-two#readme"
+}
