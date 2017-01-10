@@ -24,4 +24,9 @@ describe("words()", function() {
     expect(words("go Go GO")).toEqual(expectedCounts);
   });
 
+  it("counts multiline", function() {
+    var expectedCounts = { hello: 1, world: 1 };
+    expect(words("hello\nworld")).toEqual(expectedCounts);
+  });
+
 });
