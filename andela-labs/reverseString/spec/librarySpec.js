@@ -12,6 +12,10 @@ describe("Produce the reverse order of a word: ", function() {
     it("should return true for `anna`", function() {
       expect(reverseString('anna')).toEqual(true);
     });
+
+    it("should return true for `NaN`", function() {
+      expect(reverseString('NaN')).toEqual(true);
+    });
     
   });
 

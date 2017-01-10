@@ -3,4 +3,15 @@ function reverseString(string){
 		return null;
 	}
 
+	var mArray = string.split('');
+	var newArr = [];
+	for (var i=0; i<mArray.length; i++){
+		newArr.unshift(mArray[i]);
+	}
+	newArr = newArr.join('');
+
+	if (newArr === string) {
+		return true;
+	}
+	return newArr;
 }
